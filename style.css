@@ -35,3 +35,13 @@ ul{
     display: flex;
     gap: 1rem;
 }
+
+.img_container{
+    overflow: hidden;
+    height: 500px;
+    border-radius: 2rem;
+}
+.img_container img{
+    width: 100%;
+    margin: auto;
+}
