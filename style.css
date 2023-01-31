@@ -1,15 +1,27 @@
-body{
-    background-color: #faf9f5;
+*{
+    font-family: "massilia", sans-serif;
+font-weight: 400;
+font-style: normal;
 }
 
 
 
 
+body{
+    background-color: #ececec;
+}
+
+
+h1{
+    font-size: 5rem;
+    font-weight: 800;
+}
+
 
 li a{
     color: rgb(241, 241, 241);
 text-decoration: none;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 background-color: black;
 border-radius: 2rem;
 padding: 1rem;
@@ -37,6 +49,7 @@ ul{
 }
 
 .img_container{
+    width: 100%;
     overflow: hidden;
     height: 500px;
     border-radius: 2rem;
@@ -44,4 +57,98 @@ ul{
 .img_container img{
     width: 100%;
     margin: auto;
+}
+
+
+
+
+
+.categories{
+ display: grid;
+ margin: 2rem;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap: 2rem;
+}
+.categories div{
+padding: 2rem 2rem;
+background-color: black;
+border-radius: 5rem;
+color: #faf9f5;
+}
+.categories div:hover{
+
+background-color: rgb(100, 100, 100);
+
+}
+
+.categories h2{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.product{
+    height: 600px;
+    aspect-ratio: 2/3.4;
+margin-left: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.product_img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+        border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: white;
+    height: 400px;
+
+}
+
+
+.product_img img{
+scale: 1;
+transition: 0.2s ease-in-out;
+}
+.product_img img:hover{
+scale: 1.1;
+transition: 0.2s ease-in-out;
+
+}
+
+
+.product_text{
+    margin-right: 1rem;
+
+}
+
+.brandname{
+    font-weight: 100;
+    margin: 0;
+    margin-top: 1rem;
+    transition: 0.5s ease-in-out;
+}
+
+.brandname p:hover{
+text-decoration: underline;
+transition: 0.2s ease-in-out;
+
+}
+.productdisplayname{
+    font-weight: 800;
+    margin-top: 0rem;
+}
+
+
+
+.product_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+    gap: 5rem;
 }
