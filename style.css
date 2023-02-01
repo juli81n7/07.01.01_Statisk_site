@@ -6,7 +6,9 @@ padding: 0;
 }
 
 
-
+a{
+    text-decoration: none;
+}
 
 body{
     background-color: #ececec;
@@ -16,8 +18,16 @@ body{
 h1{
     font-size: 5rem;
     font-weight: 800;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    color: black;
 }
 
+h2{
+    font-size: 2.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
 
 li a{
     color: rgb(241, 241, 241);
@@ -55,10 +65,17 @@ list-style: none;
     height: 600px;
     border-radius: 2rem;
     margin-bottom: 1rem;
+  background-image: url(header_img.jpg);
+background-size: cover;
+background-position: center;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
 }
-.img_container img{
-    width: 100%;
-    margin: auto;
+.img_container h1{
+    margin: 0;
+    color:#faf9f5;
 }
 
 
@@ -72,7 +89,7 @@ list-style: none;
  gap: 1rem;
 }
 .categories div{
-
+cursor: pointer;
 background-color: black;
 border-radius: 2rem;
 color: #faf9f5;
@@ -80,22 +97,21 @@ height: 300px;
 display: flex;
 justify-content: center;
 align-items: center;
-}
-.categories div:hover{
+background-image:url(accessories.jpg);
+background-size: cover;
+background-position: center;
 
-background-color: rgb(100, 100, 100);
-
 }
+
 
 .categories h2{
     text-align: center;
     margin: 0;
 }
 
-.categories div:nth-child(1){
-    background-image:url(accessories.jpg);
+.categories div:hover{
+    background-size: 110%;
 }
-
 
 
 
@@ -119,13 +135,14 @@ margin-left: 1rem;
     overflow: hidden;
     background-color: white;
     height: 400px;
-
+    filter: drop-shadow(0 0 0.2rem rgb(193, 193, 193));
 }
 
 
 .product_img img{
 scale: 1;
 transition: 0.2s ease-in-out;
+z-index: 1;
 }
 .product_img img:hover{
 scale: 1.1;
@@ -136,7 +153,8 @@ transition: 0.2s ease-in-out;
 
 .product_text{
     margin-right: 1rem;
-
+    display: flex;
+    justify-content: space-between;
 }
 
 .brandname{
@@ -162,4 +180,64 @@ transition: 0.2s ease-in-out;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
     gap: 5rem;
+}
+
+
+
+
+
+
+
+
+.sale_text{
+    display: flex;
+    gap: 1rem;
+
+}
+
+.sale_text h3{
+    margin: 0;
+}
+
+.sale_text h3:nth-child(1){
+text-decoration: line-through;
+
+}
+.sale_text h3:nth-child(2){
+color: red;
+
+}
+
+
+.sale_mark h3{
+background-color: red;
+padding: 0.7rem 0.4rem;
+margin-top: 0rem;
+color: white;
+border-radius: 0rem 0rem 0.5rem 0.5rem;
+font-size: 1rem;
+}
+
+
+.soldout_mark h3{
+background-color: rgb(0, 0, 0);
+padding: 0.7rem 0.4rem;
+margin-top: 0rem;
+color: white;
+border-radius: 0rem 0rem 0.5rem 0.5rem;
+font-size: 1rem;
+}
+
+
+.product_state{
+    display: flex;
+    gap:0.2rem;
+}
+
+
+.sold_out{
+    opacity: 40%;
+}
+.sold_out img{
+    opacity: 40%;
 }
