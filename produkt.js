@@ -1,4 +1,41 @@
+const id = 1534
 
 
-const productid=123456;
-const imagePath=`https://kea-alt-del.dk/t7/images/webp/640/${productid}.webp`
+const url = `https://kea-alt-del.dk/t7/api/products/${id}`
+
+
+const imagePath=`https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`
+
+
+function hentData(){
+fetch(url)
+.then((respons) => respons.json())
+.then(visProdukt)
+
+
+}
+
+
+
+function visProdukt(produkt){
+    console.log(produkt)
+
+   document.querySelector(".productdisplayname").textContent=produkt.productdisplayname;
+   document.querySelector(".brandname").textContent=produkt.brandname;
+   document.querySelector(".price").textContent=produkt.price;
+   document.querySelector(".basecolour").textContent=produkt.basecolour;
+   document.querySelector(".gender").textContent=produkt.gender;
+   document.querySelector("img").src=imagePath;
+}
+
+
+
+
+hentData();
+
+
+
+
+
+
+
