@@ -12,7 +12,7 @@ a{
 }
 
 body{
-    background-color: white;
+    background-color: #fbf7f1;
     margin: 0;
 }
 
@@ -66,14 +66,14 @@ align-items: center;
 
 .categories{
  display: grid;
- gap: 0.1rem;
+ gap: 1rem;
  margin: 1rem;
  grid-template-columns: 1fr 1fr 1fr;
 }
 .categories div{
 cursor: pointer;
 background-color: black;
-
+border-radius: 0.5rem;
 color: #faf9f5;
 height: 300px;
 display: flex;
@@ -101,14 +101,41 @@ transition: 0.5s ease;
 .wrapper{
     width: 100%;
     overflow: hidden;
-    background-color: #FAF9F5;
+animation-name: slide_in;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
     margin-bottom: 2rem;
+    position: absolute;
 }
 
+@keyframes slide_in{
+from{
+    left: 200px;
+opacity: 0%;
+}
+to{
+    left: 0px;
+    opacity: 100%;   
+}
+
+}
+
+
 .product_list{
+    animation-name: slide_in;
+animation-duration: 1s;
+animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 display: flex;
     scroll-behavior: smooth;
 overflow-x: scroll;
+gap: 2rem;
+}
+
+.product_list .product:last-child{
+    padding-right: 10rem;
+}
+.product_list .product:first-child{
+    padding-left: 1rem;
 }
 
 
@@ -117,7 +144,8 @@ overflow-x: scroll;
     grid-template: 1fr / 1fr;
     overflow: hidden;
     margin: 0;
-
+border-radius: 0.5rem;
+margin-bottom: 0.5rem;
 
 }
 
@@ -125,8 +153,7 @@ overflow-x: scroll;
 
 
 .product{
-padding-left: 2rem;
-padding-right: 2rem;
+
 padding-top: 2rem;
 padding-bottom: 2rem;
 }
@@ -135,6 +162,12 @@ padding-bottom: 2rem;
 grid-area: 1/1;
 z-index: 1;
 height: 400px;
+transition: 0.1s ease-in-out;
+
+}
+.product_img:hover img{
+scale: 1.05;
+transition: 0.1s ease-in-out;
 
 }
 
@@ -144,7 +177,7 @@ height: 400px;
     margin-top: auto;
     margin-bottom: 1rem;
 display: flex;
-gap: 0.1rem;
+
 grid-area: 1/1;
 z-index: 2;
 }
@@ -163,6 +196,7 @@ display: contents;
     font-weight: 200;
     display: flex;
     justify-content: center;
+    
     }
 
 .sold_out_mark h3{
@@ -179,7 +213,8 @@ display: contents;
     font-weight: 200;
     display: flex;
     justify-content: center;
-    }
+    margin-right: 0.1rem;    
+}
 
 
 
