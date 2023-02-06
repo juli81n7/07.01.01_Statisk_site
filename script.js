@@ -1,6 +1,6 @@
 
 
-const fil = "https://kea-alt-del.dk/t7/api/products";
+const fil = `https://kea-alt-del.dk/t7/api/products`;
 
 
 function hentData(){
@@ -30,10 +30,6 @@ klon.querySelector(".productdisplayname").textContent = object.productdisplaynam
   klon.querySelector(".brandname").textContent = object.brandname;
   klon.querySelector(".price").textContent = object.price+" DKK";
   klon.querySelector("img").src = imagePath;
-
-
-
-
     
   //ammend her//
 beholder.appendChild(klon);

@@ -13,7 +13,7 @@
     <h1>SportsBrand</h1></a>
     <h2>Produkter</h2>
 
-
+<div class="wrapper">
     <div class="product_list">
 <a href="produkt.html">
     <div class="product">
@@ -65,8 +65,11 @@
 
 <div class="product">
 <div class="product_img sold_out">
+
 <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="product img">
+
 </div>
+
 <div class="product_text">
     <div>
     <p class="brandname">Puma</p>
@@ -77,18 +80,18 @@
 
 </div>
 
-<div class="soldout_mark">
-    <h3> SOLD OUT</h3>
- </div>
+
 
 </div>
 </div>
 <div class="product">
-    
+
 <div class="product_img sold_out">
-    
+
 <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="product img">
+
 </div>
+
 <div class="product_text">
     <div>
     <p class="brandname">Puma</p>
@@ -98,16 +101,9 @@
     <h3>1299 DKK</h3>
     <h3>800 DKK</h3>
 </div>
-</div>
-<div class="product_state">
 
-    <div class="soldout_mark">
-        <h3> SOLD OUT</h3>
-     </div>
-     <div class="sale_mark">
-        <h3> -30%</h3>
-     </div>
 </div>
+
 
 
 </div>
@@ -115,6 +111,7 @@
 
     </div>
 
+</div>
 
 <template class="productTemplate">
 
@@ -122,11 +119,21 @@
     
       <a href="produkt.html">
 
+        <div>
         <div class="product_img">
-            
+            <div class="product_state">
+
+                <div class="sold_out_mark">
+                    <h3>SOLD OUT</h3>
+                 </div>
+                 <div class="sale_mark">
+                    <h3>30%</h3>
+                 </div>
+            </div>
         <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="product img">
         </div>
-    </a>
+    </div>
+    
 
         <div class="product_text">
             
@@ -134,13 +141,19 @@
             <p class="brandname">Puma</p>
             <h3 class="productdisplayname">Big Cat Backpack Black</h3>
         
-            <h3 class="price">1299 DKK</h3>
+            <div class="price_container">
+                <h3 class="price">1299 DKK</h3>
+                <h3 class="on_sale_price">1299 DKK</h3>
+            </div>
+       
+
 
         </div>
 
         
         
         </div>
+    </a>
     </section>
 
 
