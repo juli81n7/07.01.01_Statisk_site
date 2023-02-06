@@ -30,7 +30,16 @@ klon.querySelector(".productdisplayname").textContent = object.productdisplaynam
   klon.querySelector(".brandname").textContent = object.brandname;
   klon.querySelector(".price").textContent = object.price+" DKK";
   klon.querySelector("img").src = imagePath;
-    
+
+  if (object.soldout) {
+    klon.querySelector(".product").classList.add("sold_out");
+  }
+  
+  if (object.discount) {
+    klon.querySelector(".product").classList.add("on_sale");
+    klon.querySelector(".sale_mark h3").textContent = object.discount +"%";
+    klon.querySelector(".on_sale_price").textContent = (object.price - object.price *(object.discount/100)).toFixed(2)+ " DKK";
+  }
   //ammend her//
 beholder.appendChild(klon);
   
