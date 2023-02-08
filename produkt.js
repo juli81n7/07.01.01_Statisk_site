@@ -1,4 +1,8 @@
-const id = 1534
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id")
+const fil = `https://kea-alt-del.dk/t7/api/products?limit=20&category=${id}`;
+
+
 
 
 const url = `https://kea-alt-del.dk/t7/api/products/${id}`

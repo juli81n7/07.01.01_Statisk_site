@@ -1,6 +1,12 @@
+const urlParams = new URLSearchParams(window.location.search);
+const cat = urlParams.get("cat")
+const fil = `https://kea-alt-del.dk/t7/api/products?limit=20&category=${cat}`;
 
 
-const fil = `https://kea-alt-del.dk/t7/api/products`;
+
+document.querySelector("h2").textContent = cat;
+
+
 
 
 function hentData(){
@@ -30,6 +36,7 @@ klon.querySelector(".productdisplayname").textContent = object.productdisplaynam
   klon.querySelector(".brandname").textContent = object.brandname;
   klon.querySelector(".price").textContent = object.price+" DKK";
   klon.querySelector("img").src = imagePath;
+  klon.querySelector("a").href = "produkt.html?id=" + object.id;
 
   if (object.soldout) {
     klon.querySelector(".product").classList.add("sold_out");
