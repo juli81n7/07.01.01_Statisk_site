@@ -317,27 +317,6 @@ margin: 0;
 
 
 
-.product_main{
-    display: grid;
-   grid-template-columns: 1fr 1fr;
-align-content: center;
-align-items: center;
-   margin-left: 2rem;
-   margin-right: 2rem;
-   border: black  0.1rem solid;
-height: 500px;
-}
-
-.product_main .product_img{
-    height: 400px;
-    overflow: visible;
-}
-
-.product_main h2{
-    margin: 0;
-}
-
-
 .button{
     cursor: pointer;
 }

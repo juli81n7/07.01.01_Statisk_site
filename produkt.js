@@ -26,10 +26,26 @@ function visProdukt(produkt){
 
    document.querySelector(".productdisplayname").textContent=produkt.productdisplayname;
    document.querySelector(".brandname").textContent=produkt.brandname;
-   document.querySelector(".price").textContent=produkt.price;
+   document.querySelector(".price").textContent=produkt.price +" DKK";
    document.querySelector(".basecolour").textContent=produkt.basecolour;
+   document.querySelector(".productionyear").textContent=produkt.productionyear;
+   document.querySelector(".description").innerHTML=produkt.description;
+
    document.querySelector(".gender").textContent=produkt.gender;
    document.querySelector("img").src=imagePath;
+
+
+
+   if (produkt.soldout) {
+   document.querySelector(".product").classList.add("sold_out");
+  }
+  
+  if (produkt.discount) {
+    document.querySelector(".product").classList.add("on_sale");
+    document.querySelector(".sale_mark h3").textContent = object.discount +"%";
+    document.querySelector(".on_sale_price").textContent = (object.price - object.price *(object.discount/100)).toFixed(2)+ " DKK";
+  }
+
 }
 
 
