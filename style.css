@@ -354,6 +354,13 @@ justify-content: center;
 }
 
 
+.sold_out .button{
+opacity: 30%;
+}
+
+
+
+
 .img_container .button{
     color: white;
     border: white  0.1rem solid;padding: 0 2rem;
